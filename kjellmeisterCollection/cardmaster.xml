@@ -3,13 +3,13 @@
 	<info>
 		<name>File 1</name>
 		<update version="1.0.0">
-			<file name="file1.xml" url="https://raw.githubusercontent.com/yourgithubaccount/repositoryname/master/user-yourname/file1.xml" />
+			<file name="cardmaster.xml" url="https://raw.githubusercontent.com/KjellMeister-Severed/class-cardmaster/master/kjellmeisterCollection/cardmaster.xml" />
 		</update>
 	</info>
 	
 	<!-- place your elements here -->
 	
-	<element name="Card Master" type="Class" source="kjellmeister" id="CM_Jonoman3000_kjellmeistercollection_cardmaster">
+	<element name="CardMaster" type="Class" source="kjellmeister" id="CM_Jonoman3000_kjellmeistercollection_cardmaster">
 		<description>
 	<p>
 		Running forward with his cloak billowing behind him, a human
