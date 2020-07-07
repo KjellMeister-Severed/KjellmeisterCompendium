@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>File 1</name>
+		<update version="1.0.0">
+			<file name="cardmaster.xml" url="" />
+		</update>
+	</info>
+	
+	<element name="Card Master" type="Class" source="Kjellmeisters Compendium" id="ID_KM-Auth_KMC_cardmaster">
+		<description>
+		<p>Running forward with his cloak billowing behind him, a human
+		draws three cards from his deck: one green, one red and one orange.
+		Finally within range, he throws the cards forward. Each card strikes a
+		different target, embedding into their flesh like razor blades. An orc
+		becomes wreathed in flame, another is covered in acid, and the last
+		one collapses and lets out screams of agonizing pain. &#xD;&#xD;</p>
+		<p>Pulling out an intricately crafted card embedded with gold, a dwarf
+		lifts his hand into the air. He speaks a single word, and the card
+		glows a blindly bright gold. All around him, meteors fall from the
+		sky, exploding into great balls of flame and light. &#xD;&#xD;</p>
+		<p>Card Masters are the followers of an ancient magical art, defined
+		by the cards that they place in their deck. Utilizing the power stored
+		within their collection, Card Masters can create fiery explosions,
+		arcane illusions, arcing lightning, and all sorts of spectacular effects.
+		Card Masters piece together collections of cards, which serve as their
+		way of casting spells.</p>
+		<h4>CREATING A Card Master</h4>
+		<p>Creating a Card Master requires access to at least a small starting set
+		of cards. How did your character find these cards? Did you have a
+		master that you learned from? Did you find them in an ancient ruin,
+		and then experimented with them until you figured out how to use
+		them? Did you have a natural talent, or did it come slowly to your
+		after years of practice?</p>
+		<p class="indent">What caused you to start adventuring? Are you on a quest to add to
+		your collection? Have you taken on an apprentice whom you are
+		teaching the art? Or perhaps you simply wish to put your newfound
+		power to the test.</p>
+		<h5 class="caption">QUICK BUILD</h5>
+		<p>You can make a Card Master quickly by following these suggestions.
+		First, Charisma should be your highest ability score, followed by
+		Dexterity or Constitution. Second, choose the Charlatan background.
+		Third, choose the card throw, minor illusion, and light cantrips, and
+		add the following spell-cards to your collection: burning hands, color
+		spray, disguise self, false life, ray of sickness, and shield.</p>
+		<h2>CLASS FEATURES</h2>
+		<p>As a Card Master, you gain the following class features.</p>
+		<h5 class="caption">HIT POINTS</h5>
+		<ul class="unstyled">
+			<li><strong>Hit Dice:</strong> 1d8 per Card Master level</li>
+			<li><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier</li>
+			<li><strong>Hit Points at Higher Levels:</strong> 1d8 (or 8) + your Constitution modifier per Card Master level after 1st</li>
+		</ul>
+		<h5 class="caption">PROFICIENCIES</h5>
+		<ul class="unstyled mb">
+			<li><strong>Armor:</strong> Light Armor</li>
+			<li><strong>Weapons:</strong> Simple Weapons</li>
+			<li><strong>Tools:</strong> A set of playing Cards</li>
+		</ul>
+		<ul class="unstyled">
+			<li><strong>Saving Throws:</strong> Intelligence, Charisma</li>
+			<li><strong>Skills:</strong> Choose two skills from Acrobatics, Arcana, Deception,
+					History, Intimidation, Investigation, and Sleight of Hand</li>
+		</ul>
+		<h5 class="caption">EQUIPMENT</h5>
+		<p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+		<ul>
+			<li>a light crossbow and 20 bolts OR any simple weapon</li>
+			<li>a scholar's pack OR a dungeoneer’s pack</li>
+			<li>Leather armor, a playing card set, and two daggers</li>
+		</ul>
+		<div element = "ID_KMC_CLASS_FEATURE_CARD_COLLECTION" />
+		<div element = "ID_KMC_DRAW_HAND"/>
+		<div element = "ID_KMC_ADD_TO_DECK" />
+		<div element = "ID_KMC_SPELLCASTING_ABILITY" />
+		<div element = "ID_KMC_CLASS_FEATURE_FAVORABLE_ODDS"/>
+		<div element = "ID_KMC_CLASS_FEATURE_PATH_OF_MASTERY"/>
+		<div element = "ID_KMC_CLASS_FEATURE_CRITICAL_BOON"/>
+		</description>
+		<setters>
+			<set name="hd">d8</set>
+			<set name="short">A sorcerer that uses a magical card set and plays fate to his hand.</set>
+			<set name="sourceUrl">https://github.com/KjellMeister-Severed/KjellmeisterCompendium</set>
+		</setters>
+		<sheet display="false" />
+		<rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CHARISMA"/>
+            <select type="Proficiency" name="Skill Proficiency (Card Master)" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_SLEIGHT_OF_HAND" number="2"/>
+            <grant type="Class Feature" id="ID_KMC_CLASS_FEATURE_CARD_COLLECTION" level="1" />
+            <grant type="Class Feature" id="ID_KMC_DRAW_HAND" level="1" />
+            <grant type="Class Feature" id="ID_KMC_ADD_TO_DECK" level="1" />
+			<grant type="Class Feature" id="ID_KMC_CLASS_FEATURE_PATH_OF_MASTERY" level="2" />
+			<grant type="Class Feature" id="ID_KMC_CLASS_FEATURE_CRITICAL_BOON" level="3" />
+			<grant type="Class Feature" id="ID_KMC_CLASS_FEATURE_ABILITYSCOREIMPROVEMENT_CARDMASTER" level="4" />
+        </rules>
+	</element>
+
+	<element name="Card Collection" type="Class Feature" source="Kjellmeisters compendium" id="ID_KMC_CLASS_FEATURE_CARD_COLLECTION">
+        <description>
+            <p>At 1st level, you have a collection of six 1st-level Card Master spell-cards of your choice.</p>
+        </description>
+        <sheet>
+            <description>At 1st level, you have a collection of six 1st-level Card Master spell-cards of your choice.</description>
+            <description level="1">At 1st level, you have a collection of six 1st-level Card Master spell-cards of your choice.</description>
+        </sheet>
+    </element>
+
+	<element name="Preparing a deck and drawing a hand" type="Class Feature" source="Kjellmeister Compendium" id="ID_KMC_DRAW_HAND">
+		<description>
+			<p>The Card Master table shows the size of your deck of cards which
+			you use to cast spells. The table also shows what the level of those
+			cards is; all of your cards are of the same level.</p>
+			<p class="indent">You add unique spell-cards to your deck whenever you complete a
+			long rest. To do so, choose a number of spell-cards in your collection
+			equal to the size of your deck, shown in the Card Master table.</p>
+			<p class="indent">As an action, you can draw a hand of cards from your deck. Before
+			you do so, you must assign each of the spell-cards in your deck a
+			number. Then, you must roll the appropriate die based on your deck
+			size, adding the spell-card that you rolled to your hand. Repeat this
+			until you have added a number of spell-cards to your hand equal to
+			your hand size, shown in the Card Master table.</p>
+			<p class="indent">For example, if you are a 5th-level Card Master, you first assign
+			each of the ten cards in your deck a number, 1-10. Then, you roll a
+			d10 three times, noting which cards are added to your hand. If you
+			assigned the spell burning hands the value of 3 and then end up
+			rolling 3 on your d10, then you add burning hands to your hand. If
+			you roll the same number multiple times, then that allows you to cast
+			that spell multiple times per draw.</p>
+			<p class="indent">In order to cast one of your spell-cards of 1st level or higher, you
+			must have that card in your hand of cards. Once you cast a spell-card
+			within your hand, that spell-card is discarded and may not be used
+			again until you draw a new hand. You are able to draw a new hand
+			when you finish a short or long rest.</p>
+		</description>
+		<sheet>
+			<description>
+			<p>The Card Master table shows the size of your deck of cards which
+			you use to cast spells. The table also shows what the level of those
+			cards is; all of your cards are of the same level.</p>
+			<p class="indent">You add unique spell-cards to your deck whenever you complete a
+			long rest. To do so, choose a number of spell-cards in your collection
+			equal to the size of your deck, shown in the Card Master table.</p>
+			<p class="indent">As an action, you can draw a hand of cards from your deck. Before
+			you do so, you must assign each of the spell-cards in your deck a
+			number. Then, you must roll the appropriate die based on your deck
+			size, adding the spell-card that you rolled to your hand. Repeat this
+			until you have added a number of spell-cards to your hand equal to
+			your hand size, shown in the Card Master table.</p>
+			<p class="indent">For example, if you are a 5th-level Card Master, you first assign
+			each of the ten cards in your deck a number, 1-10. Then, you roll a
+			d10 three times, noting which cards are added to your hand. If you
+			assigned the spell burning hands the value of 3 and then end up
+			rolling 3 on your d10, then you add burning hands to your hand. If
+			you roll the same number multiple times, then that allows you to cast
+			that spell multiple times per draw.</p>
+			<p class="indent">In order to cast one of your spell-cards of 1st level or higher, you
+			must have that card in your hand of cards. Once you cast a spell-card
+			within your hand, that spell-card is discarded and may not be used
+			again until you draw a new hand. You are able to draw a new hand
+			when you finish a short or long rest.</p></description>
+		</sheet>
+	</element>
+
+	<element name="Adding Cards of 1st level and higher" type="Class Feature" source="Kjellmeister Compendium" id="ID_KMC_ADD_TO_DECK">
+		<description>
+			<p>Each time you gain a Card Master level, you can add two card master
+			spell-cards of your choice to your collection. Each of these spell-
+			cards must be of a level no higher than what's shown in the table's
+			Card Level column for your level. On your adventures, you might
+			find other spells that you can add to your collection, using the same
+			rules as a wizard’s spellbook.</p>
+		</description>
+		<sheet>
+			<description><p>Each time you gain a Card Master level, you can add two card master
+			spell-cards of your choice to your collection. Each of these spell-
+			cards must be of a level no higher than what's shown in the table's
+			Card Level column for your level. On your adventures, you might
+			find other spells that you can add to your collection, using the same
+			rules as a wizard’s spellbook.</p></description>
+		</sheet>
+	</element>
+
+	<element name="Spellcasting Ability" type="type" source="source" id="ID_KMC_SPELLCASTING_ABILITY">
+		<description>
+			<p>Charisma is your spellcasting ability for your card master spells, so
+			you use your Charisma whenever a spell refers to your spellcasting
+			ability. In addition, you use your Charisma modifier when setting the
+			saving throw DC for a card master spell you cast and when making
+			an attack roll with one.</p>
+				<p><strong>Spell save DC = </strong> 8 + Proficiency bonus + your Charisma modifier </p>
+				<p><strong>Spell attack modifier = </strong> Proficiency bonus + your Charisma modifier </p>	
+				<p> Your spells are always cast as if you had an arcane focus. </p>	
+		</description>
+		<sheet>
+			<description>
+			<p>Charisma is your spellcasting ability for your card master spells, so
+			you use your Charisma whenever a spell refers to your spellcasting
+			ability. In addition, you use your Charisma modifier when setting the
+			saving throw DC for a card master spell you cast and when making
+			an attack roll with one.</p>
+				<p><strong>Spell save DC = </strong> 8 + Proficiency bonus + your Charisma modifier </p>
+				<p><strong>Spell attack modifier = </strong> Proficiency bonus + your Charisma modifier </p>	
+				<p> Your spells are always cast as if you had an arcane focus. </p>		
+			</description>
+		</sheet>
+	</element>
+
+	<element name="Favorable Odds" type="Class Feature" source="Kjellmeisters compendium" id="ID_KMC_CLASS_FEATURE_FAVORABLE_ODDS">
+        <description>
+            <p>At 1st level, your proficiency in card magic has made you
+			unnaturally lucky and precise. Your spell attacks score a critical hit
+			on a roll of 19 or 20. Additionally, whenever a creature rolls a 1 on a
+			save against one of your spells, the spell scores a critical hit on that
+			creature.</p>
+        </description>
+        <sheet>
+			<description><p>At 1st level, your proficiency in card magic has made you
+			unnaturally lucky and precise. Your spell attacks score a critical hit
+			on a roll of 19 or 20. Additionally, whenever a creature rolls a 1 on a
+			save against one of your spells, the spell scores a critical hit on that
+			creature.</p></description>
+        </sheet>
+    </element>
+
+	<element name="Path of Mastery" type="Class Feature" source="Kjellmeisters compendium" id="ID_KMC_CLASS_FEATURE_PATH_OF_MASTERY">
+        <description>
+            <p>When you reach 2nd level, you choose a path of mastery, shaping
+			your path through one of the two specializations: the Gambler and
+			the Master of Luck, each detailed at the end of the class description.
+			Your choice grants you features at 2nd level and again at 6th, 10th,
+			and 14th level.</p>
+        </description>
+        <sheet>
+			<description><p>When you reach 2nd level, you choose a path of mastery, shaping
+			your path through one of the two specializations: the Gambler and
+			the Master of Luck, each detailed at the end of the class description.
+			Your choice grants you features at 2nd level and again at 6th, 10th,
+			and 14th level.</p></description>
+        </sheet>
+    </element>
+
+	<element name="Critical Boon" type="Class Feature" source="Kjellmeisters compendium" id="ID_KMC_CLASS_FEATURE_CRITICAL_BOON">
+			<description>
+			<p>At 3rd level, your gifts in card magic allow you to gain an even
+			greater advantage when things go well for you. Choose one of the
+			following options.</p>
+			<h6>SURGE OF ENERGY</h6>
+            <p>Whenever you score a critical hit with one of your spells, you can
+			move up to your speed as part of the same action.</p>
+			<h6>ADVANTAGEOUS ATTACK</h6>
+            <p>Whenever you score a critical hit with one of your spells, your first
+			spell attack on your next turn has advantage on the attack roll and +1
+			to the damage roll.</p>
+			<h6>SHIELDING ENERGY</h6>
+            <p>Whenever you score a critical hit with one of your spells, you gain
+			+3 AC until the start of your next turn.</p></description>
+        <sheet>
+			<description>
+			<p>At 3rd level, your gifts in card magic allow you to gain an even
+			greater advantage when things go well for you. Choose one of the
+			following options.</p>
+			<h6>SURGE OF ENERGY</h6>
+            <p>Whenever you score a critical hit with one of your spells, you can
+			move up to your speed as part of the same action.</p>
+			<h6>ADVANTAGEOUS ATTACK</h6>
+            <p>Whenever you score a critical hit with one of your spells, your first
+			spell attack on your next turn has advantage on the attack roll and +1
+			to the damage roll.</p>
+			<h6>SHIELDING ENERGY</h6>
+            <p>Whenever you score a critical hit with one of your spells, you gain
+			+3 AC until the start of your next turn.</p></description>
+        </sheet>
+    </element>
+	    <element name="Ability Score Improvement" type="Class Feature" source="kjellmeisters Compendium" id="ID_KMC_CLASS_FEATURE_ABILITYSCOREIMPROVEMENT_CARDMASTER">
+		<compendium display="false" />
+        <description>
+            <p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Class Feature" name="Improvement Option (Card Master 4)" supports="Improvement Option,Card Master,4" level="4" />
+            <select type="Class Feature" name="Improvement Option (Card Master 8)" supports="Improvement Option,Card Master,8" level="8" />
+            <select type="Class Feature" name="Improvement Option (Card Master 12)" supports="Improvement Option,Card Master,12" level="12" />
+            <select type="Class Feature" name="Improvement Option (Card Master 16)" supports="Improvement Option,Card Master,16" level="16" />
+            <select type="Class Feature" name="Improvement Option (Card Master 19)" supports="Improvement Option,Card Master,19" level="19" />
+        </rules>
+    </element>
+</elements>
