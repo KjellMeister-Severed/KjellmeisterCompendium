@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="name" type="Archetype" source="source" id="ID_author_source_ARCHETYPE_name">
+        <supports>cardmaster</supports>
+        <sheet display="false">
+            <description><p>As a Master of Luck, the odds seem to unnaturally swing in your
+            favor. You gain a multitude of abilities and skills that cause life to
+            just go your way, such as better card draws, more precise attacks, and
+            uncanny escapes from danger. Those who follow this aspiration often
+            become thieves and adventurers, allowing their luck alone to carry
+            them through the day.</p></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KMC_ESCAPISM" level="2" />
+            <grant type="Archetype Feature" id="ID_KMC_REDRAW" level="6" />
+            <grant type="Archetype Feature" id="ID_KMC_UNCANNY_PRECISION" level="10" />
+            <grant type="Archetype Feature" id="ID____" level="1" />
+            <grant type="Archetype Feature" id="ID____" level="1" />
+        </rules>
+    </element>
+
+    <element name="Lucky Escape" type="Archetype Feature" source="source" id="ID_KMC_ESCAPISM">
+        <description>
+        <h4>Lucky Escape</h4>
+            <p>Starting when you choose this path at 2nd level, you gain the ability
+            to effortlessly escape from your enemies due to luck alone. You can
+            take a bonus action on each of your turns to take the Disengage
+            action.</p>
+        </description>
+        <sheet>
+            <description>
+            <h4>Lucky Escape</h4>
+            <p>Starting when you choose this path at 2nd level, you gain the ability
+            to effortlessly escape from your enemies due to luck alone. You can
+            take a bonus action on each of your turns to take the Disengage
+            action.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Redraw" type="Archetype Feature" source="The Kjellmeister Compendium" id="ID_KMC_REDRAW">
+        <description>
+            <p>At 6th level, whenever you score a critical hit, you can choose to
+            discard one of the cards in your hand. If you do so, you then
+            immediate draw another card from your deck.</p>
+        </description>
+        <sheet>
+            <description>
+            <p>At 6th level, whenever you score a critical hit, you can choose to
+            discard one of the cards in your hand. If you do so, you then
+            immediate draw another card from your deck.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Uncanny Precision" type="Archetype Feature" source="The Kjellmeister Compendium" id="ID_KMC_UNCANNY_PRECISION">
+        <description>
+            <p>Starting at 10th level, Your spell attacks score a critical hit on a roll
+            of 18-20. Additionally, whenever a creature rolls a 1 or 2 on a save
+            against one of your spells, the spell scores a critical hit on that
+            creature.</p>
+        </description>
+        <sheet>
+            <description>
+            <p>Starting at 10th level, Your spell attacks score a critical hit on a roll
+            of 18-20. Additionally, whenever a creature rolls a 1 or 2 on a save
+            against one of your spells, the spell scores a critical hit on that
+            creature.</p>
+            </description>
+        </sheet>
+    </element>
+</elements>
