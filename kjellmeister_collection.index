@@ -3,10 +3,11 @@
 	<info>
 		<name>Your Content</name>
 		<update version="1.0.0">
-			<file name="kjellmeister_collection.index" url="https://raw.githubusercontent.com/KjellMeister-Severed/class-cardmaster/master/kjellmeister.index" />
+			<file name="kjellmeister_collection.index" url="https://raw.githubusercontent.com/KjellMeister-Severed/class-cardmaster/master/kjellmeister_collection.index" />
 		</update>
 	</info>
 	<files>
-		<file name="cardmaster.xml" url="https://raw.githubusercontent.com/KjellMeister-Severed/class-cardmaster/master/kjellmeisterCollection/cardmaster.xml" />
+		<file name="cardmaster.xml" url="https://raw.githubusercontent.com/KjellMeister-Severed/KjellmeisterCompendium/master/kjellmeisterpackage/cardmaster.xml" />
+		<file name="cardmaster-pathOfLuck.xml" url="https://raw.githubusercontent.com/KjellMeister-Severed/KjellmeisterCompendium/master/kjellmeisterpackage/cardmaster-pathOfLuck.xml" />
 	</files>
 </index>
